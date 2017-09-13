@@ -99,6 +99,9 @@ void CircleManager::updateCircles(sf::RenderWindow *window, sf::Time dt)
 
 void CircleManager::deleteCircle()
 {
+    if(!root)
+        return;
+
     if(root->next)
     {
         node *temp = root->next;
