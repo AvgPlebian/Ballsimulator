@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1450878498 source:c:\users\erik\documents\c++\ball\circle.cpp
+	"circle.h"
+
+1450880845 c:\users\erik\documents\c++\ball\circle.h
+	"SFML/Graphics.hpp"
+
+1505932483 source:c:\users\erik\documents\c++\ball\main.cpp
+	<conio.h>
+	<windows.h>
+	<time.h>
+	<cmath>
+	<stdlib.h>
+	<iostream>
+	"circle.h"
+	"circlemanager.h"
+
+1505932154 c:\users\erik\documents\c++\ball\circlemanager.h
+	"circle.h"
+	<iostream>
+
+1505932783 source:c:\users\erik\documents\c++\ball\circlemanager.cpp
+	"circlemanager.h"
+
