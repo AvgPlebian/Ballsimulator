@@ -21,8 +21,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../circle.h" />
 		<Unit filename="circle.cpp" />
+		<Unit filename="circle.h" />
 		<Unit filename="circlemanager.cpp" />
 		<Unit filename="circlemanager.h" />
 		<Unit filename="main.cpp" />
