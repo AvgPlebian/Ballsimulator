@@ -9,7 +9,6 @@
 #include "circlemanager.h"
 
 
-
 double atan(int x, int y)
 {
     double angle = atan2(y, x);
@@ -20,10 +19,9 @@ double atan(int x, int y)
 
 int main()
 {
-    //sf::RenderWindow log(sf::VideoMode(200, 200), "Log");
-    //log.setPosition(sf::Vector2i(XPOS + WWIDTH + 50, YPOS + WHEIGHT/2));
+    std::cout << "Welcome to this 2D Ball Collision Simulator.\nSpace to pause and unpause.\nNumpad+ to add a ball.\nNumpad- to remove a ball.\n\n\n";
 
-    sf::RenderWindow window(sf::VideoMode(WWIDTH, WHEIGHT), "Derp");
+    sf::RenderWindow window(sf::VideoMode(WWIDTH, WHEIGHT), "Ball Collision Simulator");
     window.setPosition(sf::Vector2i(XPOS, YPOS));
 
     sf::Mouse::setPosition(sf::Vector2i(WWIDTH/2, WHEIGHT/2), window);

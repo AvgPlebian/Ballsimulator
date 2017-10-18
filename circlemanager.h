@@ -1,7 +1,7 @@
 #ifndef CIRCLEMANAGER_H
 #define CIRCLEMANAGER_H
 #include "circle.h"
-#include <iostream>
+
 
 template <class T>
 struct node
@@ -14,10 +14,10 @@ struct node
 
 const float pi = 3.1415926535897932384626433832795;
 
-const int WHEIGHT = 500;
-const int WWIDTH = 700;
-const int YPOS = 20;
-const int XPOS = 20;
+const int WHEIGHT = 960;
+const int WWIDTH = 1480;
+const int YPOS = 0;
+const int XPOS = 0;
 const int MAXRAD = 50;
 const int MINRAD = 40;
 const int STARTSPD = 50;

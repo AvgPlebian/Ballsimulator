@@ -22,3 +22,28 @@
 1505932783 source:c:\users\erik\documents\c++\ball\circlemanager.cpp
 	"circlemanager.h"
 
+1508357896 source:d:\code\c++ code\ballsimulator\circle.cpp
+	"circle.h"
+
+1508357906 d:\code\c++ code\ballsimulator\circle.h
+	<cmath>
+	<SFML/Graphics.hpp>
+
+1508359498 source:d:\code\c++ code\ballsimulator\circlemanager.cpp
+	"circlemanager.h"
+	<SFML/Window/Mouse.hpp>
+	<iostream>
+
+1508359309 d:\code\c++ code\ballsimulator\circlemanager.h
+	"circle.h"
+
+1508358092 source:d:\code\c++ code\ballsimulator\main.cpp
+	<conio.h>
+	<windows.h>
+	<time.h>
+	<cmath>
+	<stdlib.h>
+	<iostream>
+	"circle.h"
+	"circlemanager.h"
+

@@ -1,4 +1,6 @@
 #include "circlemanager.h"
+#include <SFML/Window/Mouse.hpp>
+#include <iostream>
 
 template <class T>
 node<T> * CircleManager<T>::root = nullptr;
@@ -25,10 +27,20 @@ void CircleManager<T>::newData(T d)
 template <class T>
 void CircleManager<T>::addData()
 {
+    current = root;
+    while(current)
+    {
+        if(current->data.CollisionTemplate(sf::Mouse::getPosition(), MAXRAD))return;
+        current = current->next;
+    }
+    Circle newCir(MAXRAD, MINRAD, STARTSPD, sf::Mouse::getPosition());
+    newData(newCir);
+
+
+    /*****************************
+    old calculation that iterates pixels
+
     bool placeable = true;
-
-
-
     for(float i = MAXRAD;i <= WHEIGHT-MAXRAD;i++)
     {
         for(float j = MAXRAD;j <= WWIDTH-MAXRAD;j++)
@@ -46,14 +58,14 @@ void CircleManager<T>::addData()
 
             if(placeable)
             {
-                Circle newCir;
-                newCir.initialize(MAXRAD, MINRAD, STARTSPD, sf::Vector2i(j, i));
+                Circle newCir(MAXRAD, MINRAD, STARTSPD, sf::Vector2i(j, i));
                 newData(newCir);
                 return;
             }
             placeable = true;
         }
     }
+    ******************************/
 }
 
 template <class T>
@@ -100,6 +112,8 @@ void CircleManager<T>::updateData(sf::RenderWindow *window, sf::Time dt)
 template <class T>
 void CircleManager<T>::deleteData()
 {
+    if(!root)
+        return;
     if(root->next)
     {
         current = root->next;

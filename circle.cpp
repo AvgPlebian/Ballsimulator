@@ -1,11 +1,18 @@
 #include "circle.h"
 
+
 int Circle::sqr(int x)
 {
     return x*x;
 }
 
-void Circle::initialize(int maxRad, int minRad, int spd, sf::Vector2i position)
+Circle::Circle()
+{
+    circle.setRadius(0.);
+
+}
+
+Circle::Circle(int maxRad, int minRad, int spd, sf::Vector2i position)
 {
     circle.setRadius(rand()%(maxRad-minRad)+minRad);
     radius = circle.getRadius();
@@ -23,14 +30,14 @@ void Circle::initialize(int maxRad, int minRad, int spd, sf::Vector2i position)
     {
     case 0:
         speed.x*=-1;
-        break;
+        return;
     case 1:
         speed.y*=-1;
-        break;
+        return;
     case 2:
         speed.x*=-1;
         speed.y*=-1;
-        break;
+        return;
     }
 }
 
